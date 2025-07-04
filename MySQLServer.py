@@ -12,5 +12,10 @@ try:
     myCursor.execute(query) 
     connection.commit()
     print(f"Database {dbName} created successfully!")
+
+    listAll = myCursor.execute(f"SELECT table_name FROM information_schema.tables WHERE table_schema = 'alx_book_store'")
+    # result = myCursor.fetchall()
+    # for i in result:
+    #     print(i)
 except mysql.connector.Error as error:
     print(f"Error: {error}")
