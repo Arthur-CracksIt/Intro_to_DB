@@ -1,4 +1,2 @@
 USE alx_book_store;
-SELECT column_name, data_type, character_maximum_length
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE table_name = 'Books'
+SELECT COLUMN_NAME, COLUMN_TYPE, TABLE_SCHEMA = 'alx_book_store', TABLE_NAME = 'Books';
