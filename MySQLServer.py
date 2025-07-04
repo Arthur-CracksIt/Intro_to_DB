@@ -7,7 +7,8 @@ try:
                                          passwd= check.user_credentials['password'])
     myCursor = connection.cursor()
     dbName = 'alx_book_store'
-    query = f"CREATE DATABASE IF NOT EXISTS {dbName} "
+    # query = f"CREATE DATABASE IF NOT EXISTS {dbName} "
+    query = "CREATE DATABASE IF NOT EXISTS alx_book_store"
     myCursor.execute(query) 
     connection.commit()
     print(f"Database {dbName} created successfully!")
